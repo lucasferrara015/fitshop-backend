@@ -21,13 +21,16 @@ cd fitshop-backend
    python init_db.py
 4. Ejecutar servidor:
    flask run
-# 🔗 Relación con el frontend
-El backend expone endpoints consumidos por el proyecto fitshop-frontend 
-/api/productos → catálogo de productos.
+## 🔗 Relación con el frontend
 
-/api/suscribir → suscripción de usuarios vía email.
+Este backend expone endpoints que son consumidos por el proyecto [**fitshop-frontend**](https://github.com/lucasferrara015/fitshop-frontend):
 
-/api/pago → integración con Mercado Pago (checkout sandbox).
+- `/api/productos` → catálogo de productos  
+- `/api/suscribir` → suscripción de usuarios vía email  
+- `/api/pago` → integración con Mercado Pago (checkout sandbox)  
+
+El frontend, desarrollado en React/TSX, se conecta a estos endpoints para mostrar el catálogo, gestionar el carrito y completar el flujo de pago.
+
 
 # 📌 Próximos pasos
 - Autenticación de usuarios.
