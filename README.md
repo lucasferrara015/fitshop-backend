@@ -13,10 +13,10 @@ Incluye scripts de inicialización de base de datos y endpoints listos para inte
 
 # 📂 Instalación
 1. Clonar el repositorio:
-  ```bash 
+ ```
    git clone https://github.com/lucasferrara015/fitshop-backend.git
 cd fitshop-backend
-
+```
 2. Crear entorno virtual e instalar dependencias:
    
    pip install -r requirements.txt
