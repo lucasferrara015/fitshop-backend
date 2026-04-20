@@ -13,20 +13,20 @@ Incluye scripts de inicialización de base de datos y endpoints listos para inte
 
 # 📂 Instalación
 1. Clonar el repositorio:
- ```
+ 
    git clone https://github.com/lucasferrara015/fitshop-backend.git
 cd fitshop-backend
 
 2. Crear entorno virtual e instalar dependencias:
-   ```
+   
    pip install -r requirements.txt
  
 3. Inicializar base de datos:
-   ```
+   
    python init_db.py
  
 4. Ejecutar servidor:
-  ```
+ 
    flask run
    
 ## 🔗 Relación con el frontend
