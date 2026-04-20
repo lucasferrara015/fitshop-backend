@@ -18,15 +18,15 @@ Incluye scripts de inicialización de base de datos y endpoints listos para inte
 cd fitshop-backend
 
 2. Crear entorno virtual e instalar dependencias:
-   ```bash 
+   
    pip install -r requirements.txt
    
 3. Inicializar base de datos:
-   ```bash 
+   
    python init_db.py
    
 4. Ejecutar servidor:
-  ```bash  
+  
    flask run
    
 ## 🔗 Relación con el frontend
