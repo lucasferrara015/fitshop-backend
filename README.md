@@ -59,4 +59,5 @@ Este backend se integra con fitshop-frontend para ofrecer un flujo completo de c
 Este backend está desplegado en [PythonAnywhere](https://www.pythonanywhere.com/) para pruebas y demostraciones.  
 La aplicación puede ejecutarse también en cualquier entorno local siguiendo los pasos de instalación.
 
+[🎬 Ver video demostrativo](https://drive.google.com/file/d/1goTVEo92zwkRGj4TIqYJIsyw46zykWGN/view?usp=drive_link)
 
