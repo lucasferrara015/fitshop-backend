@@ -40,12 +40,23 @@ Este backend expone endpoints que son consumidos por el proyecto [**fitshop-fron
 El frontend, desarrollado en React/TSX, se conecta a estos endpoints para mostrar el catálogo, gestionar el carrito y completar el flujo de pago.
 
 
-# 📌 Próximos pasos
-- Autenticación de usuarios.
+📌 Próximos Pasos & Roadmap Analítico (CRO & Data Engineering)
 
-- Panel de administración para gestión de productos.
+Esta fase transforma la tienda en un **caso de estudio de E-commerce & Marketing Analytics**, implementando medición avanzada de eventos, mapas de calor para optimización de conversiones (CRO) y automatización de re-engagement.
 
-- Integración de envíos y logística.
+### 1. 📊 Event Tracking & Medición de Comportamiento (GTM + GA4)
+- **Tag Management:** Configuración de Google Tag Manager (GTM) para captura de eventos del embudo e-commerce (`view_item`, `add_to_cart`, `begin_checkout`, `purchase`).
+- **Análisis de UX/UI & CRO:** Integración de herramientas de Mapas de Calor y Grabaciones (Hotjar / Clarity) para diagnosticar la fricción en el checkout y reducir la tasa de rebote.
+- **Detección de Carritos Abandonados:** Registro en tiempo real de sesiones con carritos activos inactivos (>60 min) para medir el *Cart Abandonment Rate*.
+
+### 2. 📬 Automated Re-engagement (Email Marketing & Recovery)
+- **Email Triggers:** Pipeline de automatización para el envío inmediato de correos de confirmación/bienvenida a los usuarios suscritos en la plataforma.
+- **Workflow de Recuperación:** Envío automatizado de secuencias de email para carritos abandonados con enlaces parametrizados (`UTM tags`) para atribuir la conversión en GA4.
+
+### 3. 📈 Analítica Avanzada & Retención (SQL + BigQuery + Looker Studio)
+- **Exportación de Datos:** Pipeline ETL para enviar transacciones y eventos desde el backend/base de datos hacia **Google BigQuery**.
+- **Análisis de Cohortes de Retención:** Consultas SQL avanzadas para calcular la tasa de recurrencia de compra (*Repeat Purchase Rate*) y comportamiento de usuarios por mes de adquisición.
+- **Dashboard de CRO:** Tablero en Looker Studio integrando métricas de rendimiento web, ingresos recuperados y efectividad por cohorte.
 
 ## 🔗 Demo del proyecto
 
@@ -59,5 +70,5 @@ Este backend se integra con fitshop-frontend para ofrecer un flujo completo de c
 Este backend está desplegado en [PythonAnywhere](https://www.pythonanywhere.com/) para pruebas y demostraciones.  
 La aplicación puede ejecutarse también en cualquier entorno local siguiendo los pasos de instalación.
 
-[🎬 Ver video demostrativo](https://drive.google.com/file/d/1JN7rqkRJiu9fuSl6L3d80R5vnYUJM-jw/view?usp=sharing))
+[🎬 Ver video demostrativo](https://drive.google.com/file/d/1JN7rqkRJiu9fuSl6L3d80R5vnYUJM-jw/view?usp=sharing)
 
