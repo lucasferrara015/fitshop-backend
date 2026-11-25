@@ -1,0 +1,27 @@
+:root {
+  --primary: #28a745 !important;
+  --secondary: #dc3545 !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+/* Enlaces del navbar: blanco por defecto, verde al hover/activo */
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff !important; /* blanco */
+  transition: color 0.3s ease; /* animación suave */
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--primary) !important; /* verde */
+}
