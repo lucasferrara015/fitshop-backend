@@ -1,0 +1,40 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 0.8rem; /* más chico que 1.5rem */
+  text-align: center;
+  margin-top: 1rem; /* menos separación arriba */
+  font-size: 0.85rem; /* texto más pequeño */
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* menos espacio entre íconos */
+  margin-bottom: 0.5rem;
+}
+
+.redes-sociales a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 0.9rem; /* íconos más pequeños */
+}
+
+.contacto {
+  margin: 0.3rem 0;
+  font-size: 0.8rem;
+}
+
+.derechos {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #bbb;
+}
+.fa-envelope {
+  color: #ffffff; /* blanco */
+}
+
+.fa-whatsapp {
+  color: #25d366; /* verde oficial de WhatsApp */
+}

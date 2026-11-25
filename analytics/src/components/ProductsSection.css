@@ -1,0 +1,13 @@
+/* src/components/ProductsSection.css */
+.filtros {
+  gap: 1rem;
+}
+
+.filtros input,
+.filtros select {
+  max-width: 250px;
+}
+
+.container h4.text-primary {
+  color: var(--primary);
+}
