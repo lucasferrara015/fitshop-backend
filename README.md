@@ -2,33 +2,36 @@
 Backend de FitShop desarrollado en Flask.
 Provee una API REST para el catálogo de productos, suscripción de usuarios y flujo de pagos con Mercado Pago.
 Incluye scripts de inicialización de base de datos y endpoints listos para integrarse con el frontend en React.
+
 # 🚀 Tecnologías
 - Python 3 + Flask
-
 - SQLite (base de datos inicial)
-
 - Mercado Pago SDK
-
-- Scripts de inicialización (init_db.py)
+- Scripts de inicialización (`init_db.py`)
+- Google Tag Manager (GTM) + Google Analytics 4 (GA4)
 
 # 📂 Instalación
 1. Clonar el repositorio:
- 
+   ```bash
    git clone https://github.com/lucasferrara015/fitshop-backend.git
-cd fitshop-backend
+   cd fitshop-backend
+   ```
 
 2. Crear entorno virtual e instalar dependencias:
-   
+   ```bash
    pip install -r requirements.txt
- 
+   ```
+
 3. Inicializar base de datos:
-   
+   ```bash
    python init_db.py
- 
+   ```
+
 4. Ejecutar servidor:
- 
+   ```bash
    flask run
-   
+   ```
+
 ## 🔗 Relación con el frontend
 
 Este backend expone endpoints que son consumidos por el proyecto [**fitshop-frontend**](https://github.com/lucasferrara015/fitshop-frontend):
@@ -39,15 +42,21 @@ Este backend expone endpoints que son consumidos por el proyecto [**fitshop-fron
 
 El frontend, desarrollado en React/TSX, se conecta a estos endpoints para mostrar el catálogo, gestionar el carrito y completar el flujo de pago.
 
+## 📊 Analítica Implementada (GTM + GA4)
 
-📌 Próximos Pasos & Roadmap Analítico (CRO & Data Engineering)
+El proyecto cuenta con una capa de medición end-to-end instrumentada con **Google Tag Manager** y **Google Analytics 4 (`G-EBC6QLZ7H4`)** para analizar el comportamiento de compra y la captación de leads sin comprometer datos personales (PII):
 
-Esta fase transforma la tienda en un **caso de estudio de E-commerce & Marketing Analytics**, implementando medición avanzada de eventos, mapas de calor para optimización de conversiones (CRO) y automatización de re-engagement.
+- **Eventos e-commerce y conversión:** `view_item_list`, `add_to_cart`, `begin_checkout`, y los Eventos Clave `purchase` y `generate_lead`.
+- **Embudo de conversión en GA4:** Exploración configurada desde la vista de catálogo hasta la compra completada para detectar puntos de abandono.
+- **Documentación y evidencia:** Disponible en la carpeta [`analytics/`](analytics/), incluyendo el [Plan de Medición (`tracking-plan.md`)](analytics/tracking-plan.md), el respaldo del contenedor [`gtm-container.json`](analytics/gtm-container.json) y las capturas del embudo y eventos clave en [`analytics/screenshots/`](analytics/screenshots/).
 
-### 1. 📊 Event Tracking & Medición de Comportamiento (GTM + GA4)
-- **Tag Management:** Configuración de Google Tag Manager (GTM) para captura de eventos del embudo e-commerce (`view_item`, `add_to_cart`, `begin_checkout`, `purchase`).
-- **Análisis de UX/UI & CRO:** Integración de herramientas de Mapas de Calor y Grabaciones (Hotjar / Clarity) para diagnosticar la fricción en el checkout y reducir la tasa de rebote.
-- **Detección de Carritos Abandonados:** Registro en tiempo real de sesiones con carritos activos inactivos (>60 min) para medir el *Cart Abandonment Rate*.
+## 📌 Próximos Pasos & Roadmap Analítico (CRO & Data Engineering)
+
+Esta fase amplía el caso de estudio de **E-commerce & Marketing Analytics** hacia optimización de conversiones (CRO) y automatización:
+
+### 1. 📊 Análisis de UX/UI & CRO
+- **Mapas de Calor y Grabaciones:** Integración de herramientas (Hotjar / Clarity) para diagnosticar la fricción en el checkout y reducir el abandono en `begin_checkout`.
+- **Detección de Carritos Abandonados:** Registro de sesiones con carritos activos inactivos (>60 min) para medir el *Cart Abandonment Rate*.
 
 ### 2. 📬 Automated Re-engagement (Email Marketing & Recovery)
 - **Email Triggers:** Pipeline de automatización para el envío inmediato de correos de confirmación/bienvenida a los usuarios suscritos en la plataforma.
@@ -63,7 +72,7 @@ Esta fase transforma la tienda en un **caso de estudio de E-commerce & Marketing
 El frontend de FitShop está disponible en CodeSandbox para pruebas rápidas:  
 [Ver demo en CodeSandbox](https://4jdv7h.csb.app/)
 
-Este backend se integra con fitshop-frontend para ofrecer un flujo completo de catálogo, suscripción, carrito y pagos.
+Este backend se integra con `fitshop-frontend` para ofrecer un flujo completo de catálogo, suscripción, carrito y pagos.
 
 ## 🌐 Hosting
 
@@ -71,4 +80,3 @@ Este backend está desplegado en [PythonAnywhere](https://www.pythonanywhere.com
 La aplicación puede ejecutarse también en cualquier entorno local siguiendo los pasos de instalación.
 
 [🎬 Ver video demostrativo](https://drive.google.com/file/d/1JN7rqkRJiu9fuSl6L3d80R5vnYUJM-jw/view?usp=sharing)
-
