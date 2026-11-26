@@ -1,0 +1,326 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2026-11-25 19:15:33",
+    "containerVersion": {
+        "path": "accounts/6404411161/containers/286468429/versions/0",
+        "accountId": "6404411161",
+        "containerId": "286468429",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6404411161/containers/286468429",
+            "accountId": "6404411161",
+            "containerId": "286468429",
+            "name": "Web Tienda",
+            "publicId": "GTM-WZCW3B47",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1794430689118",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6404411161/containers/286468429/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-WZCW3B47",
+                "G-EBC6QLZ7H4"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "tagId": "1",
+                "name": "Google Analytics G-EBC6QLZ7H4",
+                "type": "dest_ga",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "destinationId",
+                        "value": "G-EBC6QLZ7H4"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreDupeGtagConfigCalls",
+                        "value": "true"
+                    }
+                ],
+                "fingerprint": "1794430689141",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "tagId": "9",
+                "name": "GA4 Eventos Ecommerce",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "getEcommerceDataFrom",
+                        "value": "dataLayer"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-EBC6QLZ7H4"
+                    }
+                ],
+                "fingerprint": "1794865219705",
+                "firingTriggerId": [
+                    "8"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "tagId": "11",
+                "name": "generate_lead",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "generate_lead"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-EBC6QLZ7H4"
+                    }
+                ],
+                "fingerprint": "1795024034843",
+                "firingTriggerId": [
+                    "10"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "triggerId": "8",
+                "name": "CE - Ecommerce",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "view_item_list|add_to_cart|begin_checkout|purchase"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1795017452230"
+            },
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "triggerId": "10",
+                "name": "generate_lead",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "generate_lead"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1795023341468"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1795634133213",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6404411161/containers/286468429/versions/0?apiLink=version",
+        "gtagConfig": [
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "gtagConfigId": "2",
+                "type": "ogt_auto_events",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableOutboundClick",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableScroll",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDownload",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableHistoryEvents",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableForm",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableVideo",
+                        "value": "true"
+                    }
+                ],
+                "fingerprint": "1794430689141"
+            },
+            {
+                "accountId": "6404411161",
+                "containerId": "286468429",
+                "gtagConfigId": "3",
+                "type": "ogt_1p_data_v2",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "isAutoEnabled",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "isManualEnabled",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "autoPhoneEnabled",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "autoCollectExclusionSelectors",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "exclusionSelector"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "isEnabled",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "autoAddressEnabled",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "autoEmailEnabled",
+                        "value": "true"
+                    }
+                ],
+                "fingerprint": "1794430689141"
+            }
+        ]
+    }
+}
